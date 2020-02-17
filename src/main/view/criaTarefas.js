@@ -32,7 +32,7 @@ class CadastroTarefas extends React.Component{
             this.props.history.push('/lista-tarefas')
             messages.mensagemSucesso('Tarefa cadastrada com sucesso!')
         }).catch(error => {
-            messages.mensagemErro(error.response.data)
+            messages.mensagemErro('Erro ao cadastrar a Tarefa.')
         })
     }
 
@@ -45,11 +45,6 @@ class CadastroTarefas extends React.Component{
                             <input id="inputTarefa" type="text" className="form-control" name="conteudo" value={this.state.conteudo} onChange={e => this.setState({conteudo: e.target.value})}></input>
                         </FormGroup>
                     </div>
-                    {/*<div className="col-md-2">
-                        <FormGroup label="Marcação" htmlFor="inputMarcacao" className="p-checkbox-label">
-                            <Checkbox inputId='inputMarcacao'  value={this.state.marcacao} onChange={e => this.setState({marcacao: e.target.checked})} checked={this.state.marcacao}></Checkbox>
-                        </FormGroup>
-                    </div>*/}
                 </div>
                 <div className="row">
                     <div className="col-md-6">

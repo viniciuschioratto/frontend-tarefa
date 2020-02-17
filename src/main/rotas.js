@@ -10,7 +10,6 @@ function Rotas(){
                 <Route path="/cadastro-tarefa" component={CadastroTarefa}></Route>
                 <Route path="/lista-tarefas" component={ListaTarefas}></Route>
                 <Route exact path="/" render={() => (<Redirect to="/lista-tarefas" />)} />
-                {/* <Redirect to={ { pathname : '/lista-tarefas', state : { from : '/' } } }></Redirect> */}
             </Switch>
         </HashRouter>
     )
